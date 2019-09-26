@@ -1,11 +1,11 @@
 package com.ics.cat1.models;
 
-public class DateTo {
+public class DateDto {
     private Long id;
     private Long studentId;
     private String reason;
 
-    public DateTo(Long studentId, String reason) {
+    public DateDto(Long studentId, String reason) {
         this.studentId = studentId;
         this.reason = reason;
     }

@@ -1,6 +1,7 @@
 package com.ics.cat1;
 
 import com.ics.cat1.models.Date;
+import com.ics.cat1.models.DateDto;
 import com.ics.cat1.models.Match;
 import com.ics.cat1.models.Student;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -25,10 +26,10 @@ public interface FeignRestClient {
     Date blindDate(@RequestParam(name = "gender") String gender, @RequestParam(name = "studentId") Long studentId);
 
 //    Reject Blind Date
-    @PatchMapping("matches/{dateId}")
-    Date rejectDate(@PathVariable("dateId") Long dateId, Date date);
+    @PatchMapping("matches/{blindDateId}")
+    Date rejectDate(@PathVariable("blindDateId") Long blindDateId, DateDto dateDto);
 
 //    Request for a Date of your choice
-    @PutMapping(value = "dates/{dateId}")
-    Date requestDate(@PathVariable("dateId") Long dateId, @RequestParam(name = "matchId") Long matchId, @RequestParam(name = "studentId") Long studentId);
+    @PutMapping(value = "dates/{blindDateId}")
+    Date requestDate(@PathVariable("blindDateId") Long blindDateId, @RequestParam(name = "matchId") Long matchId, @RequestParam(name = "studentId") Long studentId);
 }
