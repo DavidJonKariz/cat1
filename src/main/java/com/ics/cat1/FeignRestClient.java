@@ -27,7 +27,7 @@ public interface FeignRestClient {
 
 //    Reject Blind Date
     @PatchMapping("matches/{blindDateId}")
-    Date rejectDate(@PathVariable("blindDateId") Long blindDateId, DateDto dateDto);
+    Date rejectDate(@PathVariable("blindDateId") Long blindDateId, @RequestBody DateDto dateDto);
 
 //    Request for a Date of your choice
     @PutMapping(value = "dates/{blindDateId}")
