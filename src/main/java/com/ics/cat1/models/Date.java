@@ -4,7 +4,7 @@ public class Date {
     private Long id;
     private Student student;
     private Match match;
-    private String requested;
+    private Requested requested;
     private String reason;
 
     private Date() {}
@@ -38,11 +38,11 @@ public class Date {
         this.match = match;
     }
 
-    public String getRequested() {
+    public Requested getRequested() {
         return requested;
     }
 
-    public void setRequested(String requested) {
+    public void setRequested(Requested requested) {
         this.requested = requested;
     }
 

@@ -5,7 +5,7 @@ public class Student {
     private String firstName;
     private Integer studentNumber;
     private Integer score;
-    private String attachment;
+    private Attachment attachment;
 
     private Student() {}
 
@@ -46,11 +46,11 @@ public class Student {
         this.score = score;
     }
 
-    public String getAttachment() {
+    public Attachment getAttachment() {
         return attachment;
     }
 
-    public void setAttachment(String attachment) {
+    public void setAttachment(Attachment attachment) {
         this.attachment = attachment;
     }
 

@@ -31,7 +31,12 @@ public class CatConnection implements CommandLineRunner {
         System.out.println("Request for a Blind Date: " + date_un.toString());
 
 //        Reject Blind Date
-//        date_un.setReason("I am underage.");
-//        Date rejectDate = feignRestClient.rejectDate(date_un.getId(), date_un);
+        date_un.setReason("Underage");
+        Date rejectDate = feignRestClient.rejectDate(date_un.getId(), date_un);
+        System.out.println("Reject Blind Date: " + rejectDate.toString());
+
+//    Request for a Date of your choice
+        Date date_request = feignRestClient.requestDate(date_un.getId(), 16L, david.getId());
+        System.out.println("Request for a Date of your choice: " + date_request.toString());
     }
 }
